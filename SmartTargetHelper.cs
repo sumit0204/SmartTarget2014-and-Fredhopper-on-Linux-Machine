@@ -33,7 +33,6 @@ namespace Yourprojectname.Tridion.WebApplication.Helpers
     /// </summary>
     public static class SmartTargetHelper
     {
-        //private static ILogger _log = LogFactory.GetLogger(typeof(SmartTargetHelper));
         private static readonly ILog LOG = LogManager.GetLogger(typeof(SmartTargetHelper));
 
         /// <summary>
@@ -79,12 +78,7 @@ namespace Yourprojectname.Tridion.WebApplication.Helpers
             //Add Region Info
             RegionCriteria regionCriteria = new RegionCriteria(regionName);
             queryBuilder.AddCriteria(regionCriteria);
-
-           
-            //Add Page Inf
-            //PageCriteria pageCriteria = new PageCriteria(new SM.Utils.TcmUri("tcm:26-71616-64"));
-            //queryBuilder.AddCriteria(pageCriteria);
-
+       
             ResultSet fredHopperResultset = queryBuilder.Execute();
 
             List<string> componentIds = new List<string>();
